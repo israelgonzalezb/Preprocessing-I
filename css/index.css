@@ -134,3 +134,65 @@ html,
 body {
   height: 100%;
 }
+.flex {
+  display: flex;
+}
+.container {
+  background-color: #657058;
+}
+.container header {
+  height: 200px;
+  background-image: url("http://picsum.photos/2000/200");
+  width: 100%;
+}
+.container header nav {
+  background-color: #657058;
+}
+.container header nav a {
+  font-size: 1.5em;
+  font-family: sans-serif;
+  color: #88BB92;
+  text-decoration: none;
+}
+.container header h1 {
+  width: 100%;
+  position: relative;
+  bottom: -80%;
+  background-color: #714955;
+}
+.container .content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.container .content #skills {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  background-color: #714955;
+}
+.container .content #skills #skill-grid {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.container .content #skills #skill-grid div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .content #right-column {
+  width: 50%;
+}
+.container .content #right-column #profile {
+  width: 100%;
+}
+.container .content #right-column #work-history {
+  width: 100%;
+}
+.container footer {
+  text-align: center;
+}

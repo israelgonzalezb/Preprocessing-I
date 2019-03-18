@@ -57,5 +57,78 @@ html, body {
     height: 100%;
 }
 
+@color1: #A0ECD0;
+@color2: #94DDBC;
+@color3: #88BB92;
+@color4: #657058;
+@color5: #714955;
+
+.flex{
+  display: flex;
+} // Is it ok to have nesting-at's at the global level?
+
+.container {
+  background-color: @color4;
+  header {
+    height: 200px;
+    background-image: url("http://picsum.photos/2000/200");
+    width: 100%;
+    nav {
+      background-color: @color4;
+      a{
+        font-size: 1.5em;
+        font-family: sans-serif;
+        color: @color3;
+        text-decoration: none;
+      }
+    }
+    h1 {
+      width: 100%;
+      position: relative;
+      bottom: -80%;
+      background-color: @color5;
+    }
+  }
+  .content {
+    width: 100%;
+    .flex;
+    flex-wrap: wrap;
+    
+    #skills {
+      width: 50%;
+      .flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
+      background-color: @color5;
+      #skill-grid {
+        width: 100%;
+        .flex;
+        overflow: hidden;
+        div {
+          width: 100%;
+          .flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+        
+      }
+      
+    }
+    #right-column {
+      width: 50%;
+      #profile {
+        width: 100%;
+      }
+      #work-history {
+        width: 100%;
+      }
+    }
+    
+  }
+  footer {
+    text-align: center;
+  }
+}
 
 
