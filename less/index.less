@@ -57,3 +57,226 @@ html, body {
     height: 100%;
 }
 
+
+/* LESS Variables */
+@color1: #160C28;
+@color2: #EFCB68;
+@color3: #E1EFE6;
+@color4: #AEB7B3;
+@color5: #000411;
+@headline-font: 'Work Sans', sans-serif;
+@body-font: 'Roboto', sans-serif;
+@phone: ~"max-width:500px";
+
+/* Less Extends */
+.flex{
+  display: flex;
+} // Is it ok to have nesting-at's at the global level?
+
+.headline-font {
+  font-family: @headline-font;
+  font-weight: bold;
+  
+}
+.body-font {
+  font-family: @body-font;
+  font-weight: normal;
+}
+
+/* Page code */
+
+
+.container {
+  background-color: @color5;
+  .headline-font;
+  padding: 25px;
+  
+  nav {
+    background-color: @color5;
+    padding-top: 20px;
+    text-align: center;
+
+    a{
+      font-size: 1.2em;
+      .headline-font;
+      color: @color3;
+      text-decoration: none;
+      margin-top: 20px;
+    }
+  }
+  header {
+    background-color: @color4;
+    height: 200px;
+    background-image: url("http://picsum.photos/2000/200");
+    background-position: center center;
+    padding-top: 5em;
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    @media ( @phone ){
+      padding-top: 6em;
+    }
+
+    h1 {
+      width: 100%;
+      position: relative;
+//      bottom: -70%;
+      background-color: @color5;
+      color: @color2;
+      font-size: 4em;
+      @media ( @phone ){
+        font-size: 2em;
+      }
+    }
+  }
+  .content {
+    width: 100%;
+    .flex;
+    flex-wrap: wrap;
+    background-color: @color5;
+    
+    #skills {
+      padding-top: 2em;
+      width: 50%;
+      height: 100%;
+      .flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+      div h2, div h1{
+        
+        @media ( @phone ){
+          font-size: 3em;
+        }
+      }
+      div h1 {
+        font-size: 2em;
+        color: @color2;
+        text-align: center;
+      }
+      #skill-grid {
+        width: 100%;
+        .flex;
+        overflow: hidden;
+        flex-direction: column;
+        justify-content: center;
+        color: @color2;
+//        background-color: black;
+        .skill-row {
+          width: 100%;
+          .flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          .skill-cell {
+            width: 50%;
+            text-align: center;
+//            background-color: @color4;
+            img {
+              width: 100%;
+              border-radius: 15%;
+            }
+            h2{
+               @media ( @phone ){
+                 font-size: 1.5em;
+              }
+            }
+            img {
+              @media ( @phone ){
+                display: none;
+              }
+            }
+            @media ( @phone ){
+              width: 100%;
+            }
+          }
+          @media ( @phone ){
+            flex-direction: column;
+          }
+        }
+        @media ( @phone ){
+          flex-direction: column;
+          width: 100%;
+        }
+      }
+      @media ( @phone ){
+        width: 100%;
+      }
+    }
+    #right-column {
+      width: 50%;
+      text-align: center;
+      padding: 2em .5em 0 .5em;
+      color: @color2;
+      
+      #profile {
+        width: 100%;
+        h2 {
+          font-size: 2em;
+          color: @color3;
+        }
+        img {
+          width: 100%;
+          border-radius: 50%;
+          
+        }
+        p {
+          margin-top: 1em;
+          margin-bottom: 1em;
+          .body-font;
+          line-height: 1.5em;
+        }
+        contact {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+          margin-bottom: 1em;
+          width: 100%;
+          color: @color3;
+          #send {
+            width: 50%;
+          }
+        }
+      }
+      #work-history {
+        width: 100%;
+        margin-top: 1em;
+        h2 {
+          margin-bottom: .5em;
+          font-size: 1.5em;
+          color: @color3;
+        }
+        h3 {
+          font-size: 1.2em;
+          font-weight: bold;
+        }
+        li {
+          margin-top: .25em;
+          margin-bottom: .25em;
+        }
+        p {
+//          border-top: 1px dotted @color4;
+          border-bottom: 1px dotted @color4;
+          border-radius: 5px;
+          margin-bottom: 1em;
+          line-height: 1.2em;
+          color: @color3;
+        }
+      }
+      @media ( @phone ){
+        width: 100%;
+      }
+    }
+    
+  }
+  footer {
+    margin-top: 4em;
+    text-align: center;
+    color: @color5;
+    background-color: @color4;
+    border-radius: 8px;
+    
+  }
+}
+
+

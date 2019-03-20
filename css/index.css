@@ -1,1 +1,347 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* LESS Variables */
+/* Less Extends */
+.flex {
+  display: flex;
+}
+.headline-font {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+}
+.body-font {
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+}
+/* Page code */
+.container {
+  background-color: #000411;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  padding: 25px;
+}
+.container nav {
+  background-color: #000411;
+  padding-top: 20px;
+  text-align: center;
+}
+.container nav a {
+  font-size: 1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
+  color: #E1EFE6;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.container header {
+  background-color: #AEB7B3;
+  height: 200px;
+  background-image: url("http://picsum.photos/2000/200");
+  background-position: center center;
+  padding-top: 5em;
+  width: 100%;
+  text-align: center;
+  border-radius: 8px;
+}
+@media (max-width:500px) {
+  .container header {
+    padding-top: 6em;
+  }
+}
+.container header h1 {
+  width: 100%;
+  position: relative;
+  background-color: #000411;
+  color: #EFCB68;
+  font-size: 4em;
+}
+@media (max-width:500px) {
+  .container header h1 {
+    font-size: 2em;
+  }
+}
+.container .content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #000411;
+}
+.container .content #skills {
+  padding-top: 2em;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+@media (max-width:500px) {
+  .container .content #skills div h2,
+  .container .content #skills div h1 {
+    font-size: 3em;
+  }
+}
+.container .content #skills div h1 {
+  font-size: 2em;
+  color: #EFCB68;
+  text-align: center;
+}
+.container .content #skills #skill-grid {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  justify-content: center;
+  color: #EFCB68;
+}
+.container .content #skills #skill-grid .skill-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.container .content #skills #skill-grid .skill-row .skill-cell {
+  width: 50%;
+  text-align: center;
+}
+.container .content #skills #skill-grid .skill-row .skill-cell img {
+  width: 100%;
+  border-radius: 15%;
+}
+@media (max-width:500px) {
+  .container .content #skills #skill-grid .skill-row .skill-cell h2 {
+    font-size: 1.5em;
+  }
+}
+@media (max-width:500px) {
+  .container .content #skills #skill-grid .skill-row .skill-cell img {
+    display: none;
+  }
+}
+@media (max-width:500px) {
+  .container .content #skills #skill-grid .skill-row .skill-cell {
+    width: 100%;
+  }
+}
+@media (max-width:500px) {
+  .container .content #skills #skill-grid .skill-row {
+    flex-direction: column;
+  }
+}
+@media (max-width:500px) {
+  .container .content #skills #skill-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+}
+@media (max-width:500px) {
+  .container .content #skills {
+    width: 100%;
+  }
+}
+.container .content #right-column {
+  width: 50%;
+  text-align: center;
+  padding: 2em 0.5em 0 0.5em;
+  color: #EFCB68;
+}
+.container .content #right-column #profile {
+  width: 100%;
+}
+.container .content #right-column #profile h2 {
+  font-size: 2em;
+  color: #E1EFE6;
+}
+.container .content #right-column #profile img {
+  width: 100%;
+  border-radius: 50%;
+}
+.container .content #right-column #profile p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-family: 'Roboto', sans-serif;
+  font-weight: normal;
+  line-height: 1.5em;
+}
+.container .content #right-column #profile contact {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 1em;
+  width: 100%;
+  color: #E1EFE6;
+}
+.container .content #right-column #profile contact #send {
+  width: 50%;
+}
+.container .content #right-column #work-history {
+  width: 100%;
+  margin-top: 1em;
+}
+.container .content #right-column #work-history h2 {
+  margin-bottom: 0.5em;
+  font-size: 1.5em;
+  color: #E1EFE6;
+}
+.container .content #right-column #work-history h3 {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.container .content #right-column #work-history li {
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+}
+.container .content #right-column #work-history p {
+  border-bottom: 1px dotted #AEB7B3;
+  border-radius: 5px;
+  margin-bottom: 1em;
+  line-height: 1.2em;
+  color: #E1EFE6;
+}
+@media (max-width:500px) {
+  .container .content #right-column {
+    width: 100%;
+  }
+}
+.container footer {
+  margin-top: 4em;
+  text-align: center;
+  color: #000411;
+  background-color: #AEB7B3;
+  border-radius: 8px;
+}
