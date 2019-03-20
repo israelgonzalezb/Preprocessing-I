@@ -134,6 +134,8 @@ html,
 body {
   height: 100%;
 }
+/* LESS Variables */
+/* Less Extends */
 .flex {
   display: flex;
 }
@@ -158,8 +160,9 @@ body {
   text-align: center;
 }
 .container nav a {
-  font-size: 1.5em;
-  font-family: sans-serif;
+  font-size: 1.2em;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: bold;
   color: #E1EFE6;
   text-decoration: none;
   margin-top: 20px;
@@ -174,9 +177,9 @@ body {
   text-align: center;
   border-radius: 8px;
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container header {
-    padding-top: 5em;
+    padding-top: 6em;
   }
 }
 .container header h1 {
@@ -186,7 +189,7 @@ body {
   color: #EFCB68;
   font-size: 4em;
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container header h1 {
     font-size: 2em;
   }
@@ -207,7 +210,7 @@ body {
   justify-content: center;
   align-content: center;
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills div h2,
   .container .content #skills div h1 {
     font-size: 3em;
@@ -240,33 +243,33 @@ body {
   width: 100%;
   border-radius: 15%;
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills #skill-grid .skill-row .skill-cell h2 {
     font-size: 1.5em;
   }
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills #skill-grid .skill-row .skill-cell img {
     display: none;
   }
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills #skill-grid .skill-row .skill-cell {
     width: 100%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills #skill-grid .skill-row {
     flex-direction: column;
   }
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills #skill-grid {
     flex-direction: column;
     width: 100%;
   }
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #skills {
     width: 100%;
   }
@@ -330,7 +333,7 @@ body {
   line-height: 1.2em;
   color: #E1EFE6;
 }
-@media (max-width: 500px) {
+@media (max-width:500px) {
   .container .content #right-column {
     width: 100%;
   }

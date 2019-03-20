@@ -58,7 +58,7 @@ html, body {
 }
 
 
-
+/* LESS Variables */
 @color1: #160C28;
 @color2: #EFCB68;
 @color3: #E1EFE6;
@@ -66,7 +66,9 @@ html, body {
 @color5: #000411;
 @headline-font: 'Work Sans', sans-serif;
 @body-font: 'Roboto', sans-serif;
+@phone: ~"max-width:500px";
 
+/* Less Extends */
 .flex{
   display: flex;
 } // Is it ok to have nesting-at's at the global level?
@@ -89,14 +91,14 @@ html, body {
   .headline-font;
   padding: 25px;
   
-    nav {
+  nav {
     background-color: @color5;
     padding-top: 20px;
-      text-align: center;
+    text-align: center;
 
     a{
-      font-size: 1.5em;
-      font-family: sans-serif;
+      font-size: 1.2em;
+      .headline-font;
       color: @color3;
       text-decoration: none;
       margin-top: 20px;
@@ -111,8 +113,8 @@ html, body {
     width: 100%;
     text-align: center;
     border-radius: 8px;
-    @media ( max-width: 500px){
-      padding-top: 5em;
+    @media ( @phone ){
+      padding-top: 6em;
     }
 
     h1 {
@@ -122,7 +124,7 @@ html, body {
       background-color: @color5;
       color: @color2;
       font-size: 4em;
-      @media ( max-width: 500px){
+      @media ( @phone ){
         font-size: 2em;
       }
     }
@@ -144,7 +146,7 @@ html, body {
       align-content: center;
       div h2, div h1{
         
-        @media (max-width: 500px){
+        @media ( @phone ){
           font-size: 3em;
         }
       }
@@ -175,29 +177,29 @@ html, body {
               border-radius: 15%;
             }
             h2{
-               @media (max-width: 500px){
+               @media ( @phone ){
                  font-size: 1.5em;
               }
             }
             img {
-              @media (max-width: 500px){
+              @media ( @phone ){
                 display: none;
               }
             }
-            @media (max-width: 500px){
+            @media ( @phone ){
               width: 100%;
             }
           }
-          @media (max-width: 500px){
+          @media ( @phone ){
             flex-direction: column;
           }
         }
-        @media (max-width: 500px){
+        @media ( @phone ){
           flex-direction: column;
           width: 100%;
         }
       }
-      @media (max-width: 500px){
+      @media ( @phone ){
         width: 100%;
       }
     }
@@ -261,7 +263,7 @@ html, body {
           color: @color3;
         }
       }
-      @media (max-width: 500px){
+      @media ( @phone ){
         width: 100%;
       }
     }
