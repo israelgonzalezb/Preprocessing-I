@@ -57,36 +57,62 @@ html, body {
     height: 100%;
 }
 
-@color1: #A0ECD0;
-@color2: #94DDBC;
-@color3: #88BB92;
-@color4: #657058;
-@color5: #714955;
+
+
+@color1: #160C28;
+@color2: #EFCB68;
+@color3: #E1EFE6;
+@color4: #AEB7B3;
+@color5: #000411;
+@headline-font: 'Work Sans', sans-serif;
+@body-font: 'Roboto', sans-serif;
 
 .flex{
   display: flex;
 } // Is it ok to have nesting-at's at the global level?
 
+.headline-font {
+  font-family: @headline-font;
+  font-weight: bold;
+  
+}
+.body-font {
+  font-family: @body-font;
+  font-weight: normal;
+}
+
+/* Page code */
+
+
 .container {
   background-color: @color4;
+  .headline-font;
+  padding: 25px;
+  
+  
   header {
+    background-color: @color4;
     height: 200px;
     background-image: url("http://picsum.photos/2000/200");
     width: 100%;
+    
     nav {
       background-color: @color4;
+      padding-top: 20px;
+      
       a{
         font-size: 1.5em;
         font-family: sans-serif;
         color: @color3;
         text-decoration: none;
+        margin-top: 20px;
       }
     }
     h1 {
       width: 100%;
       position: relative;
-      bottom: -80%;
-      background-color: @color5;
+//      bottom: -70%;
+//      background-color: @color5;
     }
   }
   .content {
@@ -96,31 +122,79 @@ html, body {
     
     #skills {
       width: 50%;
+      height: 100%;
       .flex;
       flex-wrap: wrap;
       flex-direction: column;
+      justify-content: center;
       align-content: center;
-      background-color: @color5;
+      div h2, div h1{
+        
+        @media (max-width: 500px){
+          font-size: 3em;
+        }
+      }
+      div h1 {
+        font-size: 2em;
+      }
       #skill-grid {
         width: 100%;
         .flex;
         overflow: hidden;
-        div {
+        flex-direction: column;
+        justify-content: center;
+//        background-color: black;
+        .skill-row {
           width: 100%;
           .flex;
           flex-direction: row;
           flex-wrap: wrap;
+          .skill-cell {
+            width: 50%;
+            text-align: center;
+//            background-color: @color4;
+            img {
+              width: 100%;
+            }
+            h2{
+               @media (max-width: 500px){
+                 font-size: 1.5em;
+              }
+            }
+            img {
+              @media (max-width: 500px){
+                display: none;
+              }
+            }
+            @media (max-width: 500px){
+              width: 100%;
+            }
+          }
+          @media (max-width: 500px){
+            flex-direction: column;
+          }
         }
-        
+        @media (max-width: 500px){
+          flex-direction: column;
+          width: 100%;
+        }
       }
-      
+      @media (max-width: 500px){
+        width: 100%;
+      }
     }
     #right-column {
       width: 50%;
       #profile {
         width: 100%;
+        p {
+          .body-font;
+        }
       }
       #work-history {
+        width: 100%;
+      }
+      @media (max-width: 500px){
         width: 100%;
       }
     }
